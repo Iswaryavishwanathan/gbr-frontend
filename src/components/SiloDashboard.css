@@ -1,0 +1,145 @@
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Improved button styles */
+button {
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+/* Align Export and Print buttons in the same row */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px;
+}
+
+/* Print Button Specific Styling */
+.print-btn {
+    background-color: #4CAF50; /* Green button */
+}
+
+.print-btn:hover {
+    background-color: #45a049;
+}
+
+/* Success and error message styles */
+.success-msg {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #e6ffe6; /* Light green background */
+    border: 1px solid green;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.error-msg {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #ffe6e6; /* Light red background */
+    border: 1px solid red;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Responsive table container */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #85b2e6;
+}
+
+/* Alternate row colors for readability */
+tbody tr:nth-child(even) {
+    background-color: hsl(240, 100%, 99%);
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+
+/* Print Styling */
+@media print {
+    .input-container, .button-container, .error-msg, h2 {
+        display: none !important;  /* Ensure error message is hidden */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+
+
+
+
+    
+}
+
+
